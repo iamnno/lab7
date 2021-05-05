@@ -156,6 +156,7 @@ beep:
  call sound                  ; Запуск процедури звуку
  jmp ask_cycle               ; Повернення до зчитування
 exit:
+ call draw_interface         ; Для оновлення меню до початкового стану
  mov ah, 09h                 ; Команда для виводу на екран
  mov dx, offset interface_6
  int 21h
